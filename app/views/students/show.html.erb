@@ -1,1 +1,7 @@
 <h1><%= @student.to_s %></h1>
+<%= form_tag student_path do%>
+    <label> New Student: </label>
+    <%= text_area_tag :'student[:id]' %> <br>
+    <%= submit_tag "Submit Student" %>
+    redirect_to student_path(@student)
+    <% end %>
